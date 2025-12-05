@@ -9,33 +9,33 @@
   - Set up TanStack DB Electric Collections
   - _Requirements: 9.1, 9.4_
 
-- [ ] 2. Define database schema with Drizzle
-  - [ ] 2.1 Create Drizzle schema definitions
+- [x] 2. Define database schema with Drizzle
+  - [x] 2.1 Create Drizzle schema definitions
     - Define planes, pilots, and flights tables
     - Set up proper relationships and constraints
     - Include drag state fields for real-time collaboration
     - _Requirements: 3.2, 4.2, 5.1_
 
-  - [ ] 2.2 Set up Supabase project and apply schema
+  - [x] 2.2 Set up Supabase project and apply schema
     - Create Supabase project
     - Configure Entra ID and Google OAuth providers
     - Run Drizzle migrations to create database tables
     - _Requirements: 1.1, 7.1, 8.1_
 
-  - [ ] 2.3 Create database seed script
+  - [x] 2.3 Create database seed script
     - Add seed script for cool pilot names (sci-fi/comic book themed)
     - Include at least 4 pilots: "Poe Dameron", "Starbuck", "Maverick", "Iceman"
     - Add sample planes for testing: "Millennium Falcon", "X-Wing", "Quinjet", "Milano"
     - _Requirements: 3.2_
 
-- [ ] 3. Configure sync infrastructure
-  - [ ] 3.1 Initialize Electric SQL client
+- [x] 3. Configure sync infrastructure
+  - [x] 3.1 Initialize Electric SQL client
     - Configure Electric SQL connection to Supabase
     - Set up local SQLite database with Electric extensions
     - Test sync connection between local and cloud databases
     - _Requirements: 7.1, 7.2_
 
-  - [ ] 3.2 Configure TanStack DB with Electric Collection
+  - [x] 3.2 Configure TanStack DB with Electric Collection
     - Set up TanStack DB with Electric SQL adapter
     - Create Electric Collections for planes, pilots, and flights
     - Configure shape subscriptions for related data

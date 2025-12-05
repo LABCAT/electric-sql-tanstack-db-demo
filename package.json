@@ -1,0 +1,51 @@
+{
+  "name": "flight-timetable",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:migrate": "drizzle-kit push:pg",
+    "db:seed": "tsx src/db/seed.ts",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.0",
+    "@tanstack/db": "^0.0.1-alpha.0",
+
+    "@tamagui/animations-react-native": "^1.87.0",
+    "@tamagui/config": "^1.87.0",
+    "@tamagui/core": "^1.87.0",
+    "@tamagui/toast": "^1.87.0",
+    "drizzle-orm": "^0.29.0",
+    "electric-sql": "^0.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.18.0",
+    "tamagui": "^1.87.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/uuid": "^9.0.7",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "@vitejs/plugin-react": "^4.1.0",
+    "drizzle-kit": "^0.20.4",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "postgres": "^3.4.3",
+    "tsx": "^4.1.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
+  },
+  "engines": {
+    "node": "24"
+  }
+}

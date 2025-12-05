@@ -1,0 +1,22 @@
+You are working on a flight timetable app with real-time collaboration.
+
+Tech stack: React + Vite + TypeScript + Tamagui + TanStack DB + Electric SQL + Drizzle + Supabase
+
+Code standards:
+- TypeScript everywhere
+- Tamagui components for UI
+- Functional React components
+- Proper error handling
+
+File structure:
+src/components/ - UI components
+src/lib/ - Database, auth, utilities
+src/hooks/ - Custom React hooks  
+src/types/ - TypeScript definitions
+src/db/ - Schema and migrations
+
+Key features:
+- Real-time drag & drop (like Figma)
+- Electric SQL for local-first sync
+- TanStack DB for reactive queries
+- Supabase auth (Entra ID + Google)

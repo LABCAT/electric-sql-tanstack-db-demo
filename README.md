@@ -6,10 +6,10 @@ A proof-of-concept application demonstrating real-time collaborative flight sche
 
 - **Frontend**: React + Vite + TypeScript
 - **UI Framework**: Tamagui (cross-platform compatibility)
-- **Database**: TanStack DB + Electric SQL + Drizzle ORM
+- **Database**: Drizzle ORM + PostgreSQL (Supabase)
+- **Real-time Sync**: Electric Shape API + TanStack DB (@tanstack/electric-db-collection)
 - **Backend**: Supabase (PostgreSQL + Authentication)
 - **Authentication**: Entra ID + Google via Supabase Auth
-- **Real-time Sync**: Electric SQL for local-first architecture
 
 ## Key Features
 
@@ -31,28 +31,28 @@ A proof-of-concept application demonstrating real-time collaborative flight sche
 
 1. **Install dependencies**
    ```bash
-   npm install
+   pnpm install
    ```
 
 2. **Set up environment variables**
    ```bash
    cp .env.example .env.local
-   # Fill in your Supabase and OAuth credentials
+   # Fill in your DATABASE_URL and Electric Shape API URL
    ```
 
 3. **Run database migrations**
    ```bash
-   npm run db:migrate
+   pnpm run db:migrate
    ```
 
 4. **Seed the database**
    ```bash
-   npm run db:seed
+   pnpm run db:seed
    ```
 
 5. **Start development server**
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 
 ## Project Structure

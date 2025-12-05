@@ -10,7 +10,7 @@
   - _Requirements: 9.1, 9.4_
 
 - [ ] 2. Define database schema with Drizzle
-  - [ ] 2.1 Create Drizzle schema definitions
+  - [x] 2.1 Create Drizzle schema definitions
     - Define planes, pilots, and flights tables
     - Set up proper relationships and constraints
     - Include drag state fields for real-time collaboration

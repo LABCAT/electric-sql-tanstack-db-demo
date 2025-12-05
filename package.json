@@ -14,6 +14,7 @@
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
+    "@electric-sql/pglite": "^0.3.14",
     "@supabase/supabase-js": "^2.38.0",
     "@tamagui/animations-css": "^1.87.0",
     "@tamagui/config": "^1.87.0",

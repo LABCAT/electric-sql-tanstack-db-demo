@@ -7,7 +7,8 @@ A proof-of-concept application demonstrating real-time collaborative flight sche
 - **Frontend**: React + Vite + TypeScript
 - **UI Framework**: Tamagui (cross-platform compatibility)
 - **Database**: Drizzle ORM + PostgreSQL (Supabase)
-- **Real-time Sync**: Electric Shape API + TanStack DB (@tanstack/electric-db-collection)
+- **Local Database**: PGlite (SQLite in browser via IndexedDB)
+- **Real-time Sync**: Electric SQL Shape API + TanStack DB (@tanstack/electric-db-collection)
 - **Backend**: Supabase (PostgreSQL + Authentication)
 - **Authentication**: Entra ID + Google via Supabase Auth
 
@@ -24,8 +25,21 @@ A proof-of-concept application demonstrating real-time collaborative flight sche
 
 ### Prerequisites
 - Node.js 24 (see .nvmrc)
-- Supabase account
+- Supabase account with PostgreSQL database
+- Electric SQL sync service (configured to sync with your Supabase database)
 - Entra ID and Google OAuth apps (for authentication)
+
+### Electric SQL Setup
+
+This application uses Electric SQL for local-first synchronization. Before running the app:
+
+1. **Set up Electric SQL sync service**: Follow the [Electric SQL setup guide](https://electric-sql.com/docs) to configure the sync service for your Supabase database.
+
+2. **Configure Electric Shape API**: Ensure your `VITE_ELECTRIC_URL` points to your Electric sync service's Shape API endpoint (typically `http://localhost:3003/v1/shape` for local development).
+
+3. **Database schema**: The Electric sync service must be configured to sync the `planes`, `pilots`, and `flights` tables from your Supabase database.
+
+The application automatically initializes a local SQLite database (via PGlite) on startup, which syncs with Supabase through Electric SQL.
 
 ### Getting Started
 
@@ -37,8 +51,13 @@ A proof-of-concept application demonstrating real-time collaborative flight sche
 2. **Set up environment variables**
    ```bash
    cp .env.example .env.local
-   # Fill in your DATABASE_URL and Electric Shape API URL
    ```
+   
+   Fill in your environment variables:
+   - `DATABASE_URL`: Your Supabase PostgreSQL connection string
+   - `VITE_ELECTRIC_URL`: Your Electric SQL Shape API endpoint (e.g., `http://localhost:3003/v1/shape`)
+   
+   **Note**: The Electric SQL sync service must be running and configured to sync with your Supabase database. See the [Electric SQL documentation](https://electric-sql.com/docs) for setup instructions.
 
 3. **Run database migrations**
    ```bash

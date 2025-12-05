@@ -15,35 +15,37 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.38.0",
-    "@tanstack/db": "^0.0.1-alpha.0",
-
-    "@tamagui/animations-react-native": "^1.87.0",
+    "@tamagui/animations-css": "^1.87.0",
     "@tamagui/config": "^1.87.0",
     "@tamagui/core": "^1.87.0",
     "@tamagui/toast": "^1.87.0",
-    "drizzle-orm": "^0.29.0",
-    "electric-sql": "^0.7.0",
+    "@tanstack/electric-db-collection": "^0.2.0",
+    "@tanstack/react-db": "^0.1.44",
+    "drizzle-orm": "^0.44.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-native-web": "^0.21.2",
     "react-router-dom": "^6.18.0",
     "tamagui": "^1.87.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "@types/node": "^24.5.2",
+    "@types/pg": "^8.15.6",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@types/uuid": "^9.0.7",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
-    "@vitejs/plugin-react": "^4.1.0",
-    "drizzle-kit": "^0.20.4",
+    "@vitejs/plugin-react": "^5.0.3",
+    "drizzle-kit": "^0.31.7",
     "eslint": "^8.53.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
-    "postgres": "^3.4.3",
-    "tsx": "^4.1.0",
-    "typescript": "^5.2.2",
-    "vite": "^4.5.0"
+    "pg": "^8.16.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.2",
+    "vite": "^6.1.1"
   },
   "engines": {
     "node": "24"

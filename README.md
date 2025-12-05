@@ -7,8 +7,7 @@ A proof-of-concept application demonstrating real-time collaborative flight sche
 - **Frontend**: React + Vite + TypeScript
 - **UI Framework**: Tamagui (cross-platform compatibility)
 - **Database**: Drizzle ORM + PostgreSQL (Supabase)
-- **Local Database**: PGlite (SQLite in browser via IndexedDB)
-- **Real-time Sync**: Electric SQL Shape API + TanStack DB (@tanstack/electric-db-collection)
+- **Real-time Sync**: Electric Shape API + TanStack DB (@tanstack/electric-db-collection)
 - **Backend**: Supabase (PostgreSQL + Authentication)
 - **Authentication**: Entra ID + Google via Supabase Auth
 
@@ -39,7 +38,7 @@ This application uses Electric SQL for local-first synchronization. Before runni
 
 3. **Database schema**: The Electric sync service must be configured to sync the `planes`, `pilots`, and `flights` tables from your Supabase database.
 
-The application automatically initializes a local SQLite database (via PGlite) on startup, which syncs with Supabase through Electric SQL.
+The application uses TanStack Electric Collection to sync data in real-time with Supabase through the Electric Shape API.
 
 ### Getting Started
 
